@@ -1,0 +1,2 @@
+class Education < SpendingDetail
+end

@@ -1,0 +1,2 @@
+class SpendingDetail < ApplicationRecord
+end

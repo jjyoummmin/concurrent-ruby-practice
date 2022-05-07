@@ -1,0 +1,2 @@
+class EarningDetail < ApplicationRecord
+end

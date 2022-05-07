@@ -1,0 +1,2 @@
+class Culture < SpendingDetail
+end
