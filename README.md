@@ -9,13 +9,6 @@ DATABASE
 --------
 가계부
 
-account book
-food
-shopping
-culture
-education
-
-user
 
 HTTP REQUEST
 ------------
