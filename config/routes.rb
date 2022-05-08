@@ -3,4 +3,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  resources :account_book, only: [] do
+    collection do
+      post :create_sync
+      post :create_async
+    end
+  end
 end

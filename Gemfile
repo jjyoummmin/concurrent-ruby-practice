@@ -78,3 +78,4 @@ gem 'database_cleaner'
 gem 'rspec-rails'
 
 gem 'annotate'
+gem 'byebug'

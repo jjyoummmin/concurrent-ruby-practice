@@ -13,4 +13,6 @@
 class SpendingDetail < ApplicationRecord
     belongs_to :user
     belongs_to :account_book, optional: true
+
+    scope :this_month, -> { where('date >= ? and date <= ?', Date.today.beginning_of_month, Date.today.end_of_month) }
 end
