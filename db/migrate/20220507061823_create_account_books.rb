@@ -1,9 +1,9 @@
 class CreateAccountBooks < ActiveRecord::Migration[7.0]
   def change
     create_table :account_books do |t|
-      t.references :users
+      t.references :user
       t.string :month
-      t.integer :total_result
+      t.string :total_result
       t.integer :total_earning
       t.integer :total_food
       t.integer :total_shopping

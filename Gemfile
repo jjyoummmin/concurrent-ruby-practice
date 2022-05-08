@@ -70,3 +70,11 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+
+gem 'factory_bot_rails'
+gem 'faker'
+gem 'database_cleaner'
+gem 'rspec-rails'
+
+gem 'annotate'

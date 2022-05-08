@@ -12,9 +12,9 @@
 
 ActiveRecord::Schema[7.0].define(version: 2022_05_07_064630) do
   create_table "account_books", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.bigint "users_id"
+    t.bigint "user_id"
     t.string "month"
-    t.integer "total_result"
+    t.string "total_result"
     t.integer "total_earning"
     t.integer "total_food"
     t.integer "total_shopping"
@@ -22,28 +22,28 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_07_064630) do
     t.integer "total_education"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["users_id"], name: "index_account_books_on_users_id"
+    t.index ["user_id"], name: "index_account_books_on_user_id"
   end
 
   create_table "earning_details", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.bigint "users_id"
-    t.bigint "account_books_id"
+    t.bigint "user_id"
+    t.bigint "account_book_id"
     t.string "description"
     t.integer "price"
     t.datetime "date"
-    t.index ["account_books_id"], name: "index_earning_details_on_account_books_id"
-    t.index ["users_id"], name: "index_earning_details_on_users_id"
+    t.index ["account_book_id"], name: "index_earning_details_on_account_book_id"
+    t.index ["user_id"], name: "index_earning_details_on_user_id"
   end
 
   create_table "spending_details", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.bigint "users_id"
-    t.bigint "account_books_id"
+    t.bigint "user_id"
+    t.bigint "account_book_id"
     t.string "type"
     t.string "description"
     t.integer "price"
     t.datetime "date"
-    t.index ["account_books_id"], name: "index_spending_details_on_account_books_id"
-    t.index ["users_id"], name: "index_spending_details_on_users_id"
+    t.index ["account_book_id"], name: "index_spending_details_on_account_book_id"
+    t.index ["user_id"], name: "index_spending_details_on_user_id"
   end
 
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
