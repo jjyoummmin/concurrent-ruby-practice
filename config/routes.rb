@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :account_book, only: [] do
     collection do
       post :create_sync
-      post :create_async
+      post :create_parallel
     end
   end
 end

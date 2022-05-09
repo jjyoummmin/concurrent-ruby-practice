@@ -79,3 +79,5 @@ gem 'rspec-rails'
 
 gem 'annotate'
 gem 'byebug'
+
+gem 'concurrent-ruby-edge', require: 'concurrent-edge'

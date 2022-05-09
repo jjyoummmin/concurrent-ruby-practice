@@ -1,3 +1,6 @@
 POST http://localhost:3000/account_book/create_sync
 content-type: application/json
 
+###
+POST http://localhost:3000/account_book/create_parallel
+content-type: application/json
